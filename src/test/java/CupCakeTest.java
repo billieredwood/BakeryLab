@@ -10,6 +10,7 @@ public class CupCakeTest {
     CupCake chocolate;
 
 
+
     @BeforeEach
     void setUp() {
         vanilla = new CupCake("Vanilla", "Vanilla", true, true);
@@ -20,9 +21,9 @@ public class CupCakeTest {
         chocolate.addFillings("Whipped Chocolate");
     }
 
+    @Test
+    void checkAddFillings(){
 
-        @Test
-        void checkAddFillings(){
         assertThat(strawberry.checkHasFilling()).isEqualTo("Berry Jam");
     }
 

@@ -2,13 +2,13 @@ import java.util.ArrayList;
 
 public abstract class TieredCake extends Cake{
 
-
-   public TieredCake (String name, String baseFlavour, boolean hasFruit, boolean hasIcing, int tierTotal) {
-       super(name, baseFlavour, hasFruit, hasIcing);
-       this.tierTotal = tierTotal;
+    private ArrayList<String> fillings ;
+   public TieredCake (String name, String baseFlavour, boolean hasFruit, boolean hasIcing, double price) {
+       super(name, baseFlavour, hasFruit, hasIcing, price);
+       this.fillings = new ArrayList<>();
    }
-   public int tierTotal(){
-       return this.tierTotal = 3;
-       }
+    public void addFillings(String filling){
 
+        this.fillings.add(filling);
+    }
 }

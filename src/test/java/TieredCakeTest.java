@@ -3,15 +3,21 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class TieredCake{
-    TieredCake tieredCake;
+    TieredCake vanillaTieredCake;
+    TieredCake chocolateTieredCake;
+
+
 
     @BeforeEach
     void setUp(){
-        tieredCake = new TieredCake("Tiered Cakes", "Vanilla or Chocolate", false, true );
-
+        vanillaTieredCake = new TieredCake("Tiered Vanilla", "Vanilla", false, true );
+        vanillaTieredCake.addFillings("Vanilla Cream");
+        chocolateTieredCake = new TieredCake("Chocolate", "Chocolate", false, true);
+        chocolateTieredCake.addFillings("Whipped Chocolate");
+    }
 
     @Test
-    void checkTierTotal(){
-        assertThat(tieredCake.tierTotal).isEqualTo(3);
+    void addFillings(){
+        assertThat(vanillaTieredCake.addFilling).isEqualTo("Vanilla");
     }
 }
