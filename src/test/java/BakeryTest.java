@@ -10,7 +10,10 @@ public class BakeryTest {
     CupCake vanilla;
     CupCake strawberry;
     CupCake chocolate;
-    TieredCake tieredCake;
+    Cake cake;
+    TieredCake vanillaTieredCake;
+    TieredCake chocolateTieredCake;
+
 
     @BeforeEach
     setUp() {
@@ -18,10 +21,8 @@ public class BakeryTest {
         vanilla = new CupCake("Vanilla", "Vanilla", true, true);
         strawberry = new CupCake("Strawberry", "Berry", false, true);
         chocolate = new CupCake("Chocolate", "Chocolate", false, true);
-        tieredCake = new TieredCake("Vanilla Tiered", "Vanilla", false, true);
-        tieredCake = new TieredCake("Chocolate Tiered", "Chocolate", false, true);
-
-
+        vanillaTieredCake = new TieredCake("Vanilla Tiered", "Vanilla", false, true);
+        chocolateTieredCake = new TieredCake("Chocolate Tiered", "Chocolate", false, true);
 
     }
 
@@ -31,7 +32,7 @@ public class BakeryTest {
 
     @Test
     void checkAddFillings(){
-        assertThat(stock.checkStock()).isEqualTo("Vanilla");
+        assertThat(cakeStock.checkStock()).isEqualTo("Vanilla");
     }
 
     @Test

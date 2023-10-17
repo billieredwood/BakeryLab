@@ -1,4 +1,4 @@
-public abstract class Cake {
+public abstract class Cake extends Bakery {
 
     //firstly, outline the cake's properties, by declaring cake properties' variables:
     public String name;
